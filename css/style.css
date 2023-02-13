@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+:root {
+  --color-LinkedIn: #007DF0;
+  --color-Instagram: #E1306C;
+  --color-YouTube: #FF0000;
+  --color-GitHub: #F0F0F0;
+
+  --color-LinkedIn-hover: #0064B0;
+  --color-Instagram-hover: #C60055;
+  --color-YouTube-hover: #CC0000;
+  --color-GitHub-hover: #D0D0D0;
+
+  --background-dark: #121212;
+  --background-card: #000000;
+
+  --profile-shadow: 0px 0px 18px 13px 0.35 #064783;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Jockey One', sans-serif;
+}
+
+body {
+  background-color: var(--background-dark);
+  color: #FFFFFF;
+}
+
+/* container */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* buttons list */
+.buttons{
+  display: flex;
+  flex-direction: column;
+  gap: 2.19em;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* button */
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 65px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #FFFFFF;
+  background-color: transparent;
+  font-size: 25px;
+}
+
+/* shadows social */
+.linkedin{
+  border: 2px solid var(--color-LinkedIn);
+  box-shadow: 12px 12px 18px 13px 0.35 var(--color-LinkedIn);
+}
+
+.instagram{
+  border: 2px solid var(--color-Instagram);
+  box-shadow: 0px 0px 18px 13px 0.35 var(--color-Instagram);
+}
+
+.youtube{
+  border: 2px solid var(--color-YouTube);
+  box-shadow: 0px 0px 18px 13px 0.35 var(--color-YouTube);
+}
+
+.github{
+  border: 2px solid var(--color-GitHub);
+  box-shadow: 0px 0px 18px 13px 0.35 var(--color-GitHub);
+}
+
+/* hover social */
+.linkedin:hover{
+  box-shadow: 0px 0px 18px 13px 0.35 var(--color-LinkedIn-hover);
+}
+
+.instagram:hover{
+  box-shadow: 0px 0px 18px 13px 0.35 var(--color-Instagram-hover);
+}
+
+.youtube:hover{
+  box-shadow: 0px 0px 18px 13px 0.35 var(--color-YouTube-hover);
+}
+
+.github:hover{
+  box-shadow: 0px 0px 18px 13px 0.35 var(--color-GitHub-hover);
+}
+
+/* card */
+.card{
+  display: none;
+}
