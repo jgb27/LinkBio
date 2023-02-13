@@ -106,25 +106,21 @@ a {
 /* shadows social */
 .linkedin {
   border: 2px solid var(--color-LinkedIn);
-  box-shadow: 0px 0px 21px 1px var(--color-LinkedIn);
   animation: pulse-linkedin 3s infinite;
 }
 
 .instagram {
   border: 2px solid var(--color-Instagram);
-  box-shadow: 0px 0px 21px 2px var(--color-Instagram);
   animation: pulse-instagram 3s infinite;
 }
 
 .youtube {
   border: 2px solid var(--color-YouTube);
-  box-shadow: 0px 0px 21px 2px var(--color-YouTube);
   animation: pulse-youtube 3s infinite;
 }
 
 .github {
   border: 2px solid var(--color-GitHub);
-  box-shadow: 0px 0px 21px 2px var(--color-GitHub);
   animation: pulse-github 3s infinite;
 }
 
@@ -209,13 +205,13 @@ a {
   transform: scale(1.1);
 }
 
-.toggle{
+.toggle {
   position: absolute;
   top: 0;
   right: 0;
   padding: 1em;
   transition: 1s;
-  display: none;  
+  display: none;
   animation: toggle 2s normal;
 }
 
@@ -317,5 +313,91 @@ a {
 
   100% {
     box-shadow: 0px 0px 21px 2px var(--profile-shadow);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .card img {
+    width: 50px;
+    height: 50px;
+    top: 5px;
+    left: 5px;
+  }
+
+  .card span::before {
+    width: 200px;
+    height: 120px;
+  }
+
+  .card span {
+    width: 120px;
+    height: 120px;
+    top: -50px;
+    left: -50px;
+  }
+
+  .buttons {
+    gap: 1em;
+  }
+
+  .header {
+    font-size: 1.5em;
+    margin-bottom: 0.1em;
+  }
+
+  @keyframes pulse-linkedin {
+    0% {
+      box-shadow: 0px 0px 18px 1px var(--color-LinkedIn);
+    }
+
+    50% {
+      box-shadow: 0px 0px 15px 7px var(--color-LinkedIn);
+    }
+
+    100% {
+      box-shadow: 0px 0px 18px 1px var(--color-LinkedIn);
+    }
+  }
+
+  @keyframes pulse-github {
+    0% {
+      box-shadow: 0px 0px 18px 2px var(--color-GitHub);
+    }
+
+    50% {
+      box-shadow: 0px 0px 15px 7px var(--color-GitHub);
+    }
+
+    100% {
+      box-shadow: 0px 0px 18px 2px var(--color-GitHub);
+    }
+  }
+
+  @keyframes pulse-instagram {
+    0% {
+      box-shadow: 0px 0px 18px 2px var(--color-Instagram);
+    }
+
+    50% {
+      box-shadow: 0px 0px 15px 7px var(--color-Instagram);
+    }
+
+    100% {
+      box-shadow: 0px 0px 18px 2px var(--color-Instagram);
+    }
+  }
+
+  @keyframes pulse-youtube {
+    0% {
+      box-shadow: 0px 0px 18px 2px var(--color-YouTube);
+    }
+
+    50% {
+      box-shadow: 0px 0px 15px 7px var(--color-YouTube);
+    }
+
+    100% {
+      box-shadow: 0px 0px 18px 2px var(--color-YouTube);
+    }
   }
 }
