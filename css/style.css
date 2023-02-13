@@ -152,7 +152,44 @@ a {
 
 /* card */
 .card {
-  display: none;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card span{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: transparent;
+  top: -60px;
+  left: -60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card span::before{
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 150px;
+  background-color: #ffffff;
+  transform: rotate(-45deg);
+}
+
+.card img{
+  position: absolute;
+  color: red;
+  width: 60px;
+  height: 60px;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  cursor: pointer;
 }
 
 /* export */
