@@ -117,7 +117,6 @@ a {
 }
 
 .youtube {
-  gap: 0.7em;
   border: 2px solid var(--color-YouTube);
   box-shadow: 0px 0px 21px 2px var(--color-YouTube);
   animation: pulse-youtube 3s infinite;
@@ -160,7 +159,7 @@ a {
   justify-content: center;
 }
 
-.card span{
+.card span {
   position: absolute;
   width: 150px;
   height: 150px;
@@ -172,16 +171,18 @@ a {
   align-items: center;
 }
 
-.card span::before{
+.card span::before {
   content: '';
   position: absolute;
   width: 250px;
   height: 150px;
   background-color: #ffffff;
   transform: rotate(-45deg);
+  box-shadow: 0px 0px 15px 10px var(--profile-shadow);
+  animation: pulse 3s infinite;
 }
 
-.card img{
+.card img {
   position: absolute;
   color: red;
   width: 60px;
@@ -192,12 +193,63 @@ a {
   cursor: pointer;
 }
 
+.card img:hover {
+  transform: scale(1.1);
+  transition: 0.7s;
+  animation: pulse-img 2s infinite;
+}
+
 /* export */
-.img-export {
+.export-button {
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.export-button:hover {
+  transform: scale(1.1);
+}
+
+.toggle{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  transition: 1s;
+  display: none;  
+  animation: toggle 2s normal;
 }
 
 /* animations pulse shadow*/
+
+@keyframes pulse-img {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes toggle {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0
+  }
+}
+
+
 @keyframes pulse-linkedin {
   0% {
     box-shadow: 0px 0px 21px 1px var(--color-LinkedIn);

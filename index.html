@@ -5,8 +5,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bio Link</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Bio Link">
+  <meta name="keywords" content="Bio Link">
+  <meta name="author" content="João Gustavo Bispo">
+
+  <!-- Favicon svg -->
+  <link rel="icon" href="images/github.svg" type="image/svg+xml">
+
+  <title>João Gustavo - Links</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+
+
 </head>
 
 <body>
@@ -21,29 +33,33 @@
       <button class="button linkedin" id="linkedin">
         <img src="/images/linkedin.svg">
         <a href="https://www.linkedin.com/in/jgbispo/">LinkedIn</a>
-        <img class="img-export" src="/images/export.svg">
+        <img class="export-button" data-link="https://www.linkedin.com/in/jgbispo/" src="/images/export.svg">
       </button>
       <button class="button instagram" id="instagram">
         <img src="/images/instagram.svg">
         <a href="https://www.instagram.com/jgsbispo/">Instagram</a>
-        <img class="img-export" src="/images/export.svg">
+        <img class="export-button" data-link="https://www.instagram.com/jgsbispo/" src="/images/export.svg">
       </button>
       <button class="button github" id="github">
         <img src="/images/github.svg">
         <a href="https://www.github.com/jgbispo">Repository</a>
-        <img class="img-export" src="/images/export.svg">
+        <img class="export-button" data-link="https://www.github.com/jgbispo" src="/images/export.svg">
       </button>
       <button class="button youtube" id="youtube">
         <img src="/images/youtube.svg">
         <a href="https://www.youtube.com/channel/joaogustavosbispo">Channel</a>
-        <img class="img-export" src="/images/export.svg">
+        <img class="export-button" data-link="https://www.youtube.com/channel/joaogustavosbispo" src="/images/export.svg">
       </button>
     </div>
   </div>
 
   <div class="card">
-    <img src="./images/IconGitTarget.svg" alt="github" >
+    <img id="img_github" src="./images/IconGitTarget.svg" alt="github">
     <span></span>
+  </div>
+
+  <div id="toggle" class="toggle">
+    <p>Copied Link!!</p>
   </div>
 </body>
 
