@@ -14,7 +14,7 @@
   --background-dark: #121212;
   --background-card: #000000;
 
-  --profile-shadow: 0px 0px 18px 13px rgba(6, 67, 100, 0.85);
+  --profile-shadow: rgba(6, 67, 100, 0.85);
 }
 
 * {
@@ -43,6 +43,38 @@ a {
   height: 100vh;
 }
 
+/* header */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1em;
+  margin-bottom: 20px;
+}
+
+/* header */
+
+.header p {
+  font-size: 65px;
+}
+
+.header span {
+  font-size: 25px;
+  margin-top: -20px;
+}
+
+/* profile */
+.container>img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 0px 21px 2px var(--profile-shadow);
+  animation: pulse 3s infinite;
+}
+
+
 /* buttons list */
 .buttons {
   display: flex;
@@ -60,53 +92,62 @@ a {
   justify-content: space-evenly;
   align-items: center;
   gap: 1em;
-  width: 350px;
-  height: 65px;
+  width: 300px;
+  height: 60px;
   border-radius: 20px;
   border: 2px solid #FFFFFF;
   transition: 0.5s;
   color: rgb(255, 255, 255);
   font-size: 25px;
   background: transparent;
+  cursor: pointer;
 }
 
 /* shadows social */
 .linkedin {
   border: 2px solid var(--color-LinkedIn);
   box-shadow: 0px 0px 21px 1px var(--color-LinkedIn);
+  animation: pulse-linkedin 3s infinite;
 }
 
 .instagram {
   border: 2px solid var(--color-Instagram);
   box-shadow: 0px 0px 21px 2px var(--color-Instagram);
+  animation: pulse-instagram 3s infinite;
 }
 
 .youtube {
   gap: 0.7em;
   border: 2px solid var(--color-YouTube);
   box-shadow: 0px 0px 21px 2px var(--color-YouTube);
+  animation: pulse-youtube 3s infinite;
 }
 
 .github {
   border: 2px solid var(--color-GitHub);
   box-shadow: 0px 0px 21px 2px var(--color-GitHub);
+  animation: pulse-github 3s infinite;
 }
 
 /* hover social */
 .linkedin:hover {
   box-shadow: 0px 0px 18px 13px var(--color-LinkedIn-hover);
+  animation: none;
 }
 
 .instagram:hover {
   box-shadow: 0px 0px 18px 13px var(--color-Instagram-hover);
+  animation: none;
 }
 
 .youtube:hover {
   box-shadow: 0px 0px 18px 13px var(--color-YouTube-hover);
+  animation: none;
 }
 
 .github:hover {
   box-shadow: 0px 0px 18px 13px var(--color-GitHub-hover);
+  animation: none;
 }
 
 /* card */
@@ -117,4 +158,75 @@ a {
 /* export */
 .img-export {
   cursor: pointer;
+}
+
+/* animations pulse shadow*/
+@keyframes pulse-linkedin {
+  0% {
+    box-shadow: 0px 0px 21px 1px var(--color-LinkedIn);
+  }
+
+  50% {
+    box-shadow: 0px 0px 18px 13px var(--color-LinkedIn);
+  }
+
+  100% {
+    box-shadow: 0px 0px 21px 1px var(--color-LinkedIn);
+  }
+}
+
+@keyframes pulse-instagram {
+  0% {
+    box-shadow: 0px 0px 21px 2px var(--color-Instagram);
+  }
+
+  50% {
+    box-shadow: 0px 0px 18px 13px var(--color-Instagram);
+  }
+
+  100% {
+    box-shadow: 0px 0px 21px 2px var(--color-Instagram);
+  }
+}
+
+@keyframes pulse-youtube {
+  0% {
+    box-shadow: 0px 0px 21px 2px var(--color-YouTube);
+  }
+
+  50% {
+    box-shadow: 0px 0px 18px 13px var(--color-YouTube);
+  }
+
+  100% {
+    box-shadow: 0px 0px 21px 2px var(--color-YouTube);
+  }
+}
+
+@keyframes pulse-github {
+  0% {
+    box-shadow: 0px 0px 21px 2px var(--color-GitHub);
+  }
+
+  50% {
+    box-shadow: 0px 0px 18px 13px var(--color-GitHub);
+  }
+
+  100% {
+    box-shadow: 0px 0px 21px 2px var(--color-GitHub);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0px 0px 21px 2px var(--profile-shadow);
+  }
+
+  50% {
+    box-shadow: 0px 0px 18px 13px var(--profile-shadow);
+  }
+
+  100% {
+    box-shadow: 0px 0px 21px 2px var(--profile-shadow);
+  }
 }
