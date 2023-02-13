@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
 
 :root {
-  --color-LinkedIn: #007DF0;
-  --color-Instagram: #E1306C;
-  --color-YouTube: #FF0000;
-  --color-GitHub: #F0F0F0;
+  --color-LinkedIn: rgba(0, 119, 181, 0.85);
+  --color-Instagram: rgba(255, 45, 85, 0.85);
+  --color-YouTube: rgba(255, 0, 0, 0.85);
+  --color-GitHub: rgba(145, 145, 145, 0.85);
 
-  --color-LinkedIn-hover: #0064B0;
-  --color-Instagram-hover: #C60055;
-  --color-YouTube-hover: #CC0000;
-  --color-GitHub-hover: #D0D0D0;
+  --color-LinkedIn-hover: rgba(0, 119, 181, 1);
+  --color-Instagram-hover: rgba(255, 45, 85, 1);
+  --color-YouTube-hover: rgba(255, 0, 0, 1);
+  --color-GitHub-hover: rgba(145, 145, 145, 1);
 
   --background-dark: #121212;
   --background-card: #000000;
 
-  --profile-shadow: 0px 0px 18px 13px 0.35 #064783;
+  --profile-shadow: 0px 0px 18px 13px rgba(6, 67, 100, 0.85);
 }
 
 * {
@@ -25,6 +25,11 @@
 
 body {
   background-color: var(--background-dark);
+  color: #FFFFFF;
+}
+
+a {
+  text-decoration: none;
   color: #FFFFFF;
 }
 
@@ -39,7 +44,7 @@ body {
 }
 
 /* buttons list */
-.buttons{
+.buttons {
   display: flex;
   flex-direction: column;
   gap: 2.19em;
@@ -49,60 +54,67 @@ body {
 }
 
 /* button */
-.button{
+.button {
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
+  gap: 1em;
   width: 350px;
   height: 65px;
   border-radius: 20px;
-  outline: none;
-  cursor: pointer;
-  transition: 0.3s;
-  color: #FFFFFF;
-  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  transition: 0.5s;
+  color: rgb(255, 255, 255);
   font-size: 25px;
+  background: transparent;
 }
 
 /* shadows social */
-.linkedin{
+.linkedin {
   border: 2px solid var(--color-LinkedIn);
-  box-shadow: 12px 12px 18px 13px 0.35 var(--color-LinkedIn);
+  box-shadow: 0px 0px 21px 1px var(--color-LinkedIn);
 }
 
-.instagram{
+.instagram {
   border: 2px solid var(--color-Instagram);
-  box-shadow: 0px 0px 18px 13px 0.35 var(--color-Instagram);
+  box-shadow: 0px 0px 21px 2px var(--color-Instagram);
 }
 
-.youtube{
+.youtube {
+  gap: 0.7em;
   border: 2px solid var(--color-YouTube);
-  box-shadow: 0px 0px 18px 13px 0.35 var(--color-YouTube);
+  box-shadow: 0px 0px 21px 2px var(--color-YouTube);
 }
 
-.github{
+.github {
   border: 2px solid var(--color-GitHub);
-  box-shadow: 0px 0px 18px 13px 0.35 var(--color-GitHub);
+  box-shadow: 0px 0px 21px 2px var(--color-GitHub);
 }
 
 /* hover social */
-.linkedin:hover{
-  box-shadow: 0px 0px 18px 13px 0.35 var(--color-LinkedIn-hover);
+.linkedin:hover {
+  box-shadow: 0px 0px 18px 13px var(--color-LinkedIn-hover);
 }
 
-.instagram:hover{
-  box-shadow: 0px 0px 18px 13px 0.35 var(--color-Instagram-hover);
+.instagram:hover {
+  box-shadow: 0px 0px 18px 13px var(--color-Instagram-hover);
 }
 
-.youtube:hover{
-  box-shadow: 0px 0px 18px 13px 0.35 var(--color-YouTube-hover);
+.youtube:hover {
+  box-shadow: 0px 0px 18px 13px var(--color-YouTube-hover);
 }
 
-.github:hover{
-  box-shadow: 0px 0px 18px 13px 0.35 var(--color-GitHub-hover);
+.github:hover {
+  box-shadow: 0px 0px 18px 13px var(--color-GitHub-hover);
 }
 
 /* card */
-.card{
+.card {
   display: none;
+}
+
+/* export */
+.img-export {
+  cursor: pointer;
 }
